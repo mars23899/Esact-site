@@ -1,0 +1,904 @@
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../fonts/Libre_Franklin/LibreFranklin-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização do Header */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 5px 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+/* Ajuste do Logo da EsACT */
+.navbar-brand img {
+    height: 50px; /* Define um tamanho uniforme para os logos */
+    width: auto;
+}
+
+/* Estilização dos botões */
+.nav-link {
+    font-size: 16px;
+    color: #333;
+    margin: 0 15px;
+    font-weight: normal; /* Regular */
+}
+
+/* Botão 'Sobre Nós' com a cor verde */
+.nav-item:first-child .nav-link {
+    color: #5CB6A9 !important;
+    font-weight: bold;
+}
+
+/* Estilo do botão IPB com gradiente */
+.ipb-button {
+    background: linear-gradient(90deg, #5CB6A9, #36DFC7);
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block;
+    text-align: center;
+}
+
+/* Campo de pesquisa */
+.search-box {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.search-box input {
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.search-box.active input {
+    width: 200px;
+    opacity: 1;
+}
+
+/* Ajuste do ícone de pesquisa */
+.search-icon {
+    width: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Estilização do dropdown menu */
+.dropdown-menu {
+    background-color: white;
+    border: none;
+    padding: 10px 15px;
+    left: 0;
+    transform: translateX(-20%);
+}
+
+.dropdown-item {
+    color: #5CB6A9;
+    font-weight: normal;
+    padding: 8px 15px;
+    position: relative;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(92, 182, 169, 0.1);
+}
+
+.dropdown-item::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #5CB6A9;
+    margin-top: 5px;
+}
+
+.dropdown-item:last-child::after {
+    display: none;
+}
+/* Seção Hero (Imagem de fundo com blur) */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background: url('../img/esact\ foto\ final.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+/* Conteúdo dentro da seção Hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.hero-content h1 {
+    font-size: 55px; /* Aumenta mais o tamanho */
+    font-weight: 900; /* Deixa ainda mais grosso (Extra Black) */
+    max-width: 2500px; /* Controla a largura para quebrar em duas linhas */
+    text-align: center;
+    line-height: 1.1; /* Mantém a altura entre linhas bem ajustada */
+    background: linear-gradient(90deg, #5CB6A9, #36DFC7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    white-space: normal; /* Permite a quebra de linha */
+}
+
+.hero-content p {
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+/* Estilização do botão "Candidata-te" */
+.candidatar-btn {
+    background: linear-gradient(90deg, #5CB6A9, #76dfcf);
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 100px; /* Move o botão mais para baixo */
+}
+.candidatar-btn:hover {
+    opacity: 0.8;
+}
+/* Seção dos botões de links rápidos */
+.quick-links {
+    background-color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilização dos botões */
+.quick-link-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 120px;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #5CB6A9;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Efeito de hover */
+.quick-link-box:hover {
+    background-color: #EAEAEA;
+    transform: translateY(-3px);
+}
+
+.experiencias-section {
+    background-color: #5CB6A9;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 0; /* Remove as bordas arredondadas */
+    width: 100vw; /* Agora ocupa 100% da largura da viewport */
+    max-width: 100%; /* Garante que não há restrição lateral */
+    margin: 0; /* Remove margens extras */
+}
+
+.experiencias-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.experiencias-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Container dos testemunhos */
+.testemunhos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Cada testemunho individual */
+.testemunho {
+    text-align: center;
+    max-width: 250px;
+}
+
+/* Ajuste das imagens (circulares) */
+.testemunho img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+/* Nome do estudante */
+.testemunho h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Texto do testemunho */
+.testemunho p {
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Botão de ligação */
+.botao-esact {
+    display: inline-block;
+    background: white;
+    color: #5CB6A9;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    margin-top: 20px;
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+}
+
+.botao-esact:hover {
+    background: #36DFC7;
+    color: white;
+}
+/* Secção de FAQs */
+.faq-section {
+    background-color: white;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    width: 100%;
+    gap: 50px;
+}
+
+/* Estilização da Imagem */
+.faq-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Conteúdo da FAQ */
+.faq-content {
+    max-width: 500px;
+    width: 100%;
+}
+
+.faq-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.faq-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Estilização dos Campos do Formulário */
+.faq-content form input,
+.faq-content form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #5CB6A9;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilização do Botão */
+.faq-content form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #5CB6A9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.faq-content form button:hover {
+    background-color: #36DFC7;
+}
+/* Seção de Notícias */
+.noticias-section {
+    background-color: #5CB6A9; /* Fundo verde */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-title {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.noticias-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.noticia {
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.noticia-img {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.noticia-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.noticia-img img:hover {
+    transform: scale(1.05); /* Efeito de zoom suave */
+}
+
+.noticia p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Botão "Todas as Notícias" */
+.noticias-btn-container {
+    margin-top: 30px;
+}
+
+.btn-noticias {
+    background: white;
+    color: #5CB6A9;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid white;
+    display: inline-block;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-noticias:hover {
+    background: #36DFC7;
+    color: white;
+}
+/* ====== Estilização do Footer ====== */
+.footer {
+    background-color: #ffffff;
+    color: #5CB6A9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Criando uma área de transição branca entre as seções */
+.footer-spacing {
+    background-color: white;
+    height: 50px;
+    width: 100%;
+}
+
+/* Estrutura do footer */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Primeira parte: Logos e descrição */
+.footer-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Ajuste dos logos */
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logos img {
+    height: 60px;
+}
+
+/* Texto da descrição */
+.footer-description {
+    max-width: 800px;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Ícones sociais */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 15px; /* Espaçamento entre os ícones */
+    margin-top: 15px;
+}
+
+.social-icons img {
+    width: 30px; /* Define um tamanho padrão */
+    height: 30px;
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Pequeno zoom ao passar o mouse */
+}
+
+/* Segunda parte: Links */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Estilização das colunas */
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Estilo dos links */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #5CB6A9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilização do dropdown dos Contactos */
+.footer-column ul li .dropdown {
+    display: none;
+    padding-left: 15px;
+}
+
+.footer-column ul li:hover .dropdown {
+    display: block;
+}
+
+/* Botão do IPB News */
+.news-btn {
+    display: inline-block;
+    background-color: #5CB6A9;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 2px solid #5CB6A9;
+    transition: 0.3s;
+}
+
+.news-btn:hover {
+    background-color: transparent;
+    color: #5CB6A9;
+}
+
+/* Copyright */
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.8;
+    text-align: center;
+    padding: 10px;
+}
+/* Estilização da Página de Licenciaturas */
+.cursos-container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.cursos-container h1 {
+    font-size: 35px;
+    text-align: left;
+    margin-bottom: 40px;
+    color: #5CB6A9;
+}
+
+/* Grid de cursos */
+.cursos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo de cada curso */
+.curso {
+    display: flex;
+    align-items: center;
+    background-color: #5CB6A9;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.curso:hover {
+    transform: scale(1.02);
+}
+
+/* Estilização das imagens dos cursos */
+.curso img {
+    width: 90px; /* Ajuste conforme necessário */
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Informações do curso */
+.curso-info {
+    flex: 1;
+    color: white;
+}
+
+.curso-info h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.curso-info p {
+    font-size: 16px;
+    margin: 5px 0 10px;
+}
+
+/* Botão "Descobre mais" */
+.btn-descobre-mais {
+    display: inline-block;
+    background: white;
+    color: #5CB6A9;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-descobre-mais:hover {
+    background: #e5f7f4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .curso {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .curso img {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+}
+/* Seção Principal dos Cursos */
+.courses-section {
+    max-width: 1200px;
+    margin: 100px auto 50px auto;
+    padding: 20px;
+}
+
+.courses-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5CB6A9;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* Estilização dos Retângulos dos Cursos */
+.course-box {
+    background-color: #5CB6A9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Conteúdo dentro das caixas dos cursos */
+.course-content {
+    flex-grow: 1;
+    color: white;
+}
+
+.course-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Botão "Descobre Mais" */
+.discover-btn {
+    display: inline-block;
+    background-color: white;
+    color: #5CB6A9;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.discover-btn:hover {
+    background-color: #36DFC7;
+    color: white;
+}
+
+/* Ajustes do Footer */
+.footer {
+    background-color: #5CB6A9;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.footer-content {
+    text-align: center;
+    max-width: 400px;
+}
+
+.footer img {
+    height: 50px;
+    margin: 5px;
+}
+
+.footer-links {
+    text-align: left;
+}
+
+.footer-links h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #36DFC7;
+}
+.courses-section {
+    padding: 120px 10%;
+    text-align: left;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #5CB6A9;
+    margin-bottom: 20px;
+}
+
+/* Container dos cursos */
+.course-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo de cada retângulo de curso */
+.course-box {
+    background-color: #5CB6A9;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-box h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.course-box p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Botão "Descobre mais" */
+.descubra-mais {
+    align-self: flex-end;
+    background-color: white;
+    color: #5CB6A9;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+.descubra-mais:hover {
+    background-color: #36DFC7;
+    color: white;
+}
+
+/* Estilização do Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Efeito de fade para transição das imagens */
+.fade {
+    animation: fadeEffect 3s infinite;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.4;} 
+    to {opacity: 1;}
+}
+
+/* Título dinâmico */
+.title-container {
+    text-align: center;
+    padding: 20px 0;
+    background-color: white;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5CB6A9;
+}
+
+/* Seção de conteúdo principal */
+.about-section, .mission-values {
+    background-color: #5CB6A9;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+.about-section h2, .mission-values h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-section p, .mission-values p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mission-values li {
+    font-size: 18px;
+    margin: 10px 0;
+}

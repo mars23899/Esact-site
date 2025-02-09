@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EsACT - Header</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Mantém o header fixo no topo */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 10px 30px;
+        }
+        
+        /* Estilização dos botões de navegação */
+        .nav-link {
+            font-size: 16px;
+            color: #333;
+            margin: 0 15px;
+            font-weight: normal; /* Deixa os botões em Regular (exceto Sobre Nós) */
+        }
+        
+        /* Cor do botão "Sobre Nós" */
+        .nav-item:first-child .nav-link {
+            color: #5CB6A9 !important; /* Verde personalizado apenas para Sobre Nós */
+            font-weight: bold; /* Apenas este botão em negrito */
+        }
+        
+        /* Estilo do botão IPB com gradiente */
+        .ipb-button {
+            background: linear-gradient(90deg, #5CB6A9, #36DFC7);
+            color: white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+        }
+        
+        /* Ajuste do logo da EsACT */
+        .navbar-brand img:last-child { /* Assume que o último logo é o da EsACT */
+            height: 81px; /* Ajusta a altura para "scale to fit" no header */
+            width: auto;
+        }
+    </style>
+</head>
+<!-- Link do CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Logos -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/ipb logo.png" alt="IPB Logo">
+                <img src="img/esact logo.png" alt="EsACT Logo">
+            </a>
+            
+            <!-- Botão Navbar para Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Links de Navegação -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="Sobre nós.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://webdocs.ipb.pt/portal/download?docId=12853">Alunos</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="estudarDropdown" role="button" data-bs-toggle="dropdown">Estudar</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Licenciaturas.html">Licenciaturas</a></li>
+                            <li><a class="dropdown-item" href="Ctesp.html">CTeSP</a></li>
+                            <li><a class="dropdown-item" href="mestrados.html">Mestrados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://ipb.pt/pt/internacionalizar/erasmus">Erasmus</a></li>
+                </ul>
+            </div>
+            
+            <!-- Pesquisa + Botão IPB -->
+            <div class="d-flex align-items-center">
+                <div class="search-box d-flex">
+                    <input type="text" class="form-control" placeholder="Pesquisar...">
+                    <img src="img/pesquisar botão.png" alt="Pesquisar" id="search-btn" class="search-icon">
+                </div>
+                <a href="https://www.ipb.pt" class="ipb-button" target="_blank">IPB</a>
+
+                
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- Slideshow -->
+    <section class="slideshow-container">
+        <div class="slide fade">
+            <img src="img/slide1.jpg" alt="EsACT Campus">
+        </div>
+        <div class="slide fade">
+            <img src="img/slide2.jpg" alt="Laboratórios EsACT">
+        </div>
+        <div class="slide fade">
+            <img src="img/slide3.jpg" alt="Auditório EsACT">
+        </div>
+        <div class="slide fade">
+            <img src="img/slide4.jpg" alt="Eventos EsACT">
+        </div>
+    </section>
+    
+    <!-- Título dinâmico -->
+    <div class="title-container">
+        <h2 id="changing-title">O Nosso Campus</h2>
+    </div>
+    
+    <!-- Sobre a EsACT -->
+    <section class="about-section">
+        <div class="container">
+            <h2>EsACT - Escola Superior de Comunicação, Administração e Turismo</h2>
+            <p>
+                A Escola Superior de Comunicação, Administração e Turismo (EsACT), uma das unidades orgânicas do Instituto Politécnico de Bragança (IPB), tem desempenhado um papel crucial na formação académica e profissional de milhares de estudantes. Desde a sua fundação, a EsACT tem-se destacado pelo seu compromisso com a inovação, internacionalização e ligação ao mercado de trabalho, preparando os alunos para enfrentar os desafios do mundo globalizado.
+                
+                A história da EsACT remonta à necessidade de criar um polo de ensino superior que atendesse às exigências do setor empresarial, do turismo e da comunicação na região de Mirandela e Trás-os-Montes. Com uma visão estratégica voltada para o desenvolvimento regional e nacional, a EsACT tornou-se uma referência no ensino superior, promovendo cursos inovadores e alinhados com as tendências do mercado. O crescimento contínuo da instituição deve-se à sua aposta na excelência pedagógica, investigação aplicada e parcerias estratégicas com entidades públicas e privadas.</p>
+            <p>Atualmente, a EsACT oferece um portefólio diversificado de cursos nas áreas de Comunicação, Marketing, Turismo, Gestão e Tecnologias da Informação, proporcionando uma formação de elevada qualidade, com forte componente prática e projetos reais. Os estudantes da EsACT beneficiam de um ambiente académico dinâmico, onde têm acesso a laboratórios modernos, programas de mobilidade internacional e colaborações com empresas e organizações que impulsionam a sua integração no mercado de trabalho.
+            </p>
+        </div>
+    </section>
+
+    <!-- Missão e Valores -->
+    <section class="mission-values">
+        <div class="container">
+            <h2>Missão e Valores</h2>
+            <p>
+                A missão da EsACT é formar profissionais altamente qualificados, capazes de contribuir ativamente para a sociedade, impulsionando a inovação, o empreendedorismo e o desenvolvimento sustentável. A escola assume um compromisso firme com a educação de qualidade, inclusão social e valorização do conhecimento, promovendo um ensino que alia teoria e prática, sempre com uma forte ligação ao tecido empresarial.
+                
+                Entre os principais valores que orientam a atuação da EsACT, destacam-se:
+                - Excelência Académica → Desenvolvimento de competências técnicas e humanas, garantindo um ensino de alta qualidade.- Inovação e Criatividade → Estímulo à criação de novas ideias, projetos e soluções para os desafios contemporâneos.- Internacionalização → Promoção de programas de mobilidade, parcerias internacionais e intercâmbios académicos.- Sustentabilidade e Responsabilidade Social → Compromisso com práticas que promovem o desenvolvimento sustentável e o bem-estar da comunidade.- Ligação ao Mercado de Trabalho → Parcerias estratégicas com empresas, proporcionando estágios e oportunidades de emprego</p>
+            <ul>
+                <li>Excelência Académica</li>
+                <li>Inovação e Criatividade</li>
+                <li>Internacionalização</li>
+                <li>Sustentabilidade e Responsabilidade Social</li>
+                <li>Ligação ao Mercado de Trabalho</li>
+            </ul>
+        </div>
+    </section>
+    
+    <script src="js/script.js"></script> <!-- Arquivo JS externo -->
+
+
+
+     
+    <script>
+        $(document).ready(function() {
+            // Animação do campo de pesquisa ao clicar no ícone
+            $('#search-btn').click(function() {
+                $('.search-box').toggleClass('active');
+            });
+        });
+    </script>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Primeira Parte: Logos e Descrição -->
+        <div class="footer-top">
+            <div class="footer-logos">
+                <img src="img/ipb logo.png" alt="IPB Logo">
+                <img src="img/esact logo.png" alt="EsACT Logo">
+            </div>
+            <p class="footer-description">
+                A missão de uma instituição de ensino superior inclui a transferência de tecnologia e a disseminação do saber 
+                sob a forma de projetos de colaboração com a comunidade. A EsACT contribui com várias iniciativas inovadoras a nível regional e nacional.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/esactipb" target="_blank">
+                    <img src="img/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/esactipb" target="_blank">
+                    <img src="img/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/school/ipb-pt/" target="_blank">
+                    <img src="img/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://twitter.com/ipb_pt" target="_blank">
+                    <img src="img/twitter.png" alt="Twitter">
+                </a>
+            </div>
+            
+        </div>
+
+        <!-- Segunda Parte: Links Importantes -->
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Ligações úteis</h4>
+                <ul>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contactosDropdown" role="button" data-bs-toggle="dropdown">
+                            Contactos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="tel:+35130029900">
+                                    +351 300 299 00
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="mailto:academicos-esact@ipb.pt">
+                                    academicos-esact@ipb.pt
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="https://www.google.com/maps/place/Escola+Superior+de+Comunica%C3%A7%C3%A3o,+Administra%C3%A7%C3%A3o+e+Turismo+-+Instituto+Polit%C3%A9cnico+de+Bragan%C3%A7a/@41.478017,-7.177743,17z/data=!3m1!4b1!4m6!3m5!1s0xd3b0932c41f4ab1:0x2b59d90dc8eb4b3a!8m2!3d41.478017!4d-7.177743!16s%2Fg%2F1tfty7j5?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D">Localização</a></li>
+                    <li><a href="https://suporte.ipb.pt/">Suporte</a></li>
+                    <li><a href="https://denuncia.ipb.pt/#/">Denúncias</a></li>
+                    <li><a href="https://inqueritos.ipb.pt/?r=survey/index/sid/261498/lang/pt">Sugestões</a></li>
+                </ul>
+            </div>
+
+            <!-- Terceira Parte: Outras Escolas -->
+            <div class="footer-column">
+                <h4>Outras escolas</h4>
+                <ul>
+                    <li><a href="https://esa.ipb.pt/">Escola Superior Agrária</a></li>
+                    <li><a href="https://www.ese.ipb.pt/">Escola Superior de Educação</a></li>
+                    <li><a href="https://essa.ipb.pt/">Escola Superior de Saúde</a></li>
+                    <li><a href="https://www.estig.ipb.pt/">Escola Superior de Tecnologia e Gestão</a></li>
+                    <li><a href="https://ehb.ipb.pt/">Escola Superior de Hotelaria e Bem-Estar</a></li>
+                </ul>
+            </div>
+
+            <!-- Quarta Parte: IPB News -->
+            <div class="footer-column">
+                <h4>IPB NEWS</h4>
+                <p>Descobre as novas atividades do IPB</p>
+                <a href="https://ipbnews.ipb.pt/submissao/index.php?r=user-management%2Fauth%2Flogin" class="news-btn">Partilha de eventos</a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>Escola Superior de Comunicação, Administração e Turismo, Instituto Politécnico de Bragança.</p>
+            <p>Av. 25 de Abril, Mirandela, Portugal | Tel: 300029900 | Email: academicos-esact@ipb.pt</p>
+        </div>
+    </div>
+</footer>
+    
+</body>
+</html>
